@@ -1,3 +1,17 @@
+
+---
+
+> ⚠️ **Important Disclaimer — Please Read Before Building**
+>
+> This project has only been briefly tested in my own car at the time of release. While it has been verified to work — all major channels display correctly on the dash — I have not yet put significant runtime on it. Long-term reliability, edge cases, and bugs that may only appear under specific conditions (extreme temps, prolonged use, certain sensor combinations, etc.) are unknown at this point.
+>
+> If you build one and find issues or improvements, please open an issue or submit a pull request so the project can improve over time. This is a community-driven release — your testing and feedback are what will make it solid.
+
+---
+
+
+
+
 # MS3 Pro → Haltech UC-10 CAN Bridge
 
 An Arduino-based CAN bus bridge that translates MegaSquirt MS3 Pro Ultimate broadcast data into Haltech V2 CAN protocol, allowing you to run a Haltech UC-10 (or compatible) dash on a MegaSquirt ECU.
