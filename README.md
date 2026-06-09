@@ -1,22 +1,20 @@
+# MS3 Pro → Haltech UC-10 CAN Bridge
+
+An Arduino-based CAN bus bridge that translates MegaSquirt MS3 Pro Ultimate broadcast data into Haltech V2 CAN protocol, allowing you to run a Haltech UC-10 (or compatible) dash on a MegaSquirt ECU.
+
+**Total parts cost: approximately $40-55** depending on enclosure choice and what you already have on hand.
 
 ---
 
 > ⚠️ **Important Disclaimer — Please Read Before Building**
 >
-> This project has only been briefly tested in my own car at the time of release. While it has been verified to work — all major channels display correctly on the dash — I have not yet put significant runtime on it. Long-term reliability, edge cases, and bugs that may only appear under specific conditions (extreme temps, prolonged use, certain sensor combinations, etc.) are unknown at this point.
+> This project has only been briefly tested in my own car at the time of release. While it has been verified to work — all major channels display correctly on the dash — I have not yet put significant runtime on it. Long-term reliability, edge cases, and bugs that may only appear under specific conditions (extreme temps, sustained high RPM, prolonged use, certain sensor combinations, etc.) are unknown at this point.
+>
+> Use this firmware at your own risk. I make no guarantees about its behavior in your specific setup, and I am not responsible for any damage to your ECU, dash, sensors, vehicle, or anything else that may result from using this code.
 >
 > If you build one and find issues or improvements, please open an issue or submit a pull request so the project can improve over time. This is a community-driven release — your testing and feedback are what will make it solid.
 
 ---
-
-
-
-
-# MS3 Pro → Haltech UC-10 CAN Bridge
-
-An Arduino-based CAN bus bridge that translates MegaSquirt MS3 Pro Ultimate broadcast data into Haltech V2 CAN protocol, allowing you to run a Haltech UC-10 (or compatible) dash on a MegaSquirt ECU.
-
-**Total parts cost: ~$30-40**
 
 ## What It Does
 
@@ -34,15 +32,16 @@ Reads the MS3 "Advanced Real-Time Broadcast" at 500 kbps, repackages every suppo
 
 ## Hardware Required
 
-| Item | Qty | Approx Cost | Notes |
-|------|-----|-------------|-------|
-| Arduino Nano (or clone) | 1 | $3-5 | ATmega328P, 5V, 16MHz |
-| MCP2515 CAN module with TJA1051 transceiver | 2 | $4-8 | 8MHz crystal version |
-| Nano terminal adapter | 1 | $3-5 | Optional but makes wiring easier |
-| Project enclosure | 1 | $8-15 | IP65 rated recommended for engine bay |
-| Wire, heat shrink, etc. | — | $5 | 22-24 AWG signal wire |
+| Item | Qty | Approximate Cost (Amazon) | Notes |
+|------|-----|---------------------------|-------|
+| Arduino Nano clone (ATmega328P, 16MHz, 5V) | 1 | $8-12 for 3-pack | Cheap clones work fine. Avoid Nano Every (different chip, different timing). |
+| MCP2515 CAN module with TJA1050 or TJA1051 transceiver | 2 | $9-13 for 2-pack | TJA1051 preferred for better automotive EMC. 8 MHz crystal. |
+| Nano screw terminal adapter | 1 | $9-13 for 3-pack | Optional but highly recommended — makes wiring much easier. |
+| IP65 project enclosure (100×68×50mm or larger) | 1 | $7-15 | A 100×68×50mm box fits the build but is tight. Larger boxes (120×120×75mm) make wiring easier. |
+| Hookup wire (22-24 AWG), heat shrink, fuse holder, inline 1A fuse | — | $8-12 | If you don't already have these in your tool kit. |
+| DTM-4 connector pigtail (for Haltech side) | 1 | $5-10 | Optional if you splice directly into Haltech harness. |
 
-Total: approximately $30-40 depending on enclosure and connector choices.
+**Note:** Component multipacks mean your true incremental cost per build is lower if you already have parts on hand or build multiple bridges.
 
 ## Wiring
 
@@ -139,6 +138,23 @@ constexpr int8_t FUELT_SENSOR_INDEX  = 5;   // Generic sensor 6
 ```
 
 Set to `-1` for any sensor you don't have wired.
+
+## Build Photos
+
+### Bridge installed in the car
+The complete bridge in a 100×68×50mm IP65 enclosure, installed in the car.
+
+![Bridge installed](images/bridge_installed.jpg)
+
+### Dash working — BMW theme
+Live data displaying on the Haltech UC-10 using a BMW-themed gauge layout. Fuel pressure (43 PSI), battery voltage (12.56V), and other channels reading correctly.
+
+![Dash BMW theme](images/dash_bmw.jpg)
+
+### Dash working — Haltech default theme
+Same setup running the stock Haltech gauge theme. All channels live and updating.
+
+![Dash Haltech theme](images/dash_haltech.jpg)
 
 ## Installation
 
