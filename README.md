@@ -151,6 +151,8 @@ Live data displaying on the Haltech UC-10 using a BMW-themed gauge layout. Fuel 
 
 ![Dash BMW theme](dash_bmw.jpg)
 
+*BMW gauge theme designed by [@vaaclav_krejci](https://www.instagram.com/vaaclav_krejci) — give him a follow on Instagram.*
+
 ### Dash working — Haltech default theme
 Same setup running the stock Haltech gauge theme. All channels live and updating.
 
