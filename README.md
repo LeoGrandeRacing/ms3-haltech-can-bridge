@@ -144,17 +144,17 @@ Set to `-1` for any sensor you don't have wired.
 ### Bridge installed in the car
 The complete bridge in a 100×68×50mm IP65 enclosure, installed in the car.
 
-![Bridge installed](images/bridge_installed.jpg)
+![Bridge installed](bridge_installed.jpg)
 
 ### Dash working — BMW theme
 Live data displaying on the Haltech UC-10 using a BMW-themed gauge layout. Fuel pressure (43 PSI), battery voltage (12.56V), and other channels reading correctly.
 
-![Dash BMW theme](images/dash_bmw.jpg)
+![Dash BMW theme](dash_bmw.jpg)
 
 ### Dash working — Haltech default theme
 Same setup running the stock Haltech gauge theme. All channels live and updating.
 
-![Dash Haltech theme](images/dash_haltech.jpg)
+![Dash Haltech theme](dash_haltech.jpg)
 
 ## Installation
 
