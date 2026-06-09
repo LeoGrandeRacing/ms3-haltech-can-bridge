@@ -147,7 +147,7 @@ The complete bridge in a 100×68×50mm IP65 enclosure, installed in the car.
 ![Bridge installed](bridge_installed.jpg)
 
 ### Dash working — BMW theme
-Live data displaying on the Haltech UC-10 using a BMW-themed gauge layout. Fuel pressure (43 PSI), battery voltage (12.56V), and other channels reading correctly.
+Live data displaying on the Haltech UC-10 using a BMW-themed gauge layout.
 
 ![Dash BMW theme](dash_bmw.jpg)
 
